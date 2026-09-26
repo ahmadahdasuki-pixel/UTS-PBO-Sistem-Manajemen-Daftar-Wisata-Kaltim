@@ -194,6 +194,8 @@ Pilihan menu 4 menunjukkan proses penghapusan data wisata berdasarkan ID. Progra
 
 <img width="477" height="269" alt="image" src="https://github.com/user-attachments/assets/bf3478ef-5cae-48c9-96be-170e4c2ca32a" />
 
+Pilihan menu 5 adalah keluar dari program yang menandakan program selesai.
+
 ## 9. Kesimpulan Program
 Program Sistem Manajemen Tempat Wisata di Kalimantan Timur berhasil dikembangkan menggunakan bahasa pemrograman Java dengan menerapkan konsep dasar Pemrograman Berorientasi Objek. Program dapat melakukan proses pengelolaan data berupa tambah, tampil, update, dan hapus terhadap data wisata alam dan wisata buatan.
 
