@@ -158,3 +158,40 @@ java
 super.tampilkanDataUmum();
 ```
 Dengan demikian, method tampilkanData() memiliki perilaku yang disesuaikan dengan class yang menggunakannya.
+
+## 8. Dokumentasi Alur Program
+**1. Menu Utama**
+
+<img width="458" height="192" alt="image" src="https://github.com/user-attachments/assets/847fc539-7d06-41ee-bcb3-fc70fead31de" />
+
+**2. Menu Tambah**
+
+<img width="315" height="391" alt="image" src="https://github.com/user-attachments/assets/ea74920f-c9e1-4205-848e-2172fbdfb0e4" />
+
+
+**3. Menu Tampilkan**
+
+<img width="319" height="521" alt="image" src="https://github.com/user-attachments/assets/0811e5a5-a613-465b-85ad-bb79f15b1add" />
+
+
+**4. Menu Update**
+
+<img width="319" height="461" alt="image" src="https://github.com/user-attachments/assets/31129812-f924-4cea-904d-2989ac17c17a" />
+
+
+**5. Menu Hapus**
+
+<img width="283" height="368" alt="image" src="https://github.com/user-attachments/assets/2c2d26fa-f96c-43fa-bb4c-79f442f2bd65" />
+
+
+**6. Keluar Program**
+
+<img width="477" height="269" alt="image" src="https://github.com/user-attachments/assets/bf3478ef-5cae-48c9-96be-170e4c2ca32a" />
+
+## 9. Kesimpulan Program
+Program Sistem Manajemen Tempat Wisata di Kalimantan Timur berhasil dikembangkan menggunakan bahasa pemrograman Java dengan menerapkan konsep dasar Pemrograman Berorientasi Objek. Program dapat melakukan proses pengelolaan data berupa tambah, tampil, update, dan hapus terhadap data wisata alam dan wisata buatan.
+
+Dalam implementasinya, program menerapkan inheritance melalui hubungan antara TempatWisata, WisataAlam, dan WisataBuatan. Polymorphism diterapkan menggunakan method overriding pada method tampilkanData(). Selain itu, condition digunakan untuk menentukan pilihan menu dan jenis wisata, sedangkan looping digunakan untuk menjalankan menu secara berulang dan mengolah data yang tersimpan dalam ArrayList.
+
+Dengan penerapan konsep tersebut, program dapat mengelola data tempat wisata secara terstruktur sekaligus menunjukkan penerapan konsep PBO dalam sebuah studi kasus yang sederhana dan relevan.
+
