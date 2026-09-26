@@ -164,25 +164,31 @@ Dengan demikian, method tampilkanData() memiliki perilaku yang disesuaikan denga
 
 <img width="458" height="192" alt="image" src="https://github.com/user-attachments/assets/847fc539-7d06-41ee-bcb3-fc70fead31de" />
 
+Ini adalah tampilan awal atau menu utama saat program baru di jalankan.Menu utama program menyediakan berbagai fitur untuk mengelola data tempat wisata, yaitu tambah, tampilkan, update, hapus, dan keluar dari program.
+
 **2. Menu Tambah**
 
 <img width="315" height="391" alt="image" src="https://github.com/user-attachments/assets/ea74920f-c9e1-4205-848e-2172fbdfb0e4" />
 
+Pilihan menu 1 menunjukkan proses penambahan data wisata baru melalui menu tambah. Pengguna memasukkan data umum tempat wisata terlebih dahulu, kemudian memilih jenis wisata untuk menentukan data khusus yang harus dimasukkan. Fitur ini membuat data tempat wisata dapat ditambahkan secara dinamis tanpa harus mengubah source code. Pemilihan jenis wisata juga menunjukkan penerapan struktur class WisataAlam dan WisataBuatan.
 
 **3. Menu Tampilkan**
 
 <img width="319" height="521" alt="image" src="https://github.com/user-attachments/assets/0811e5a5-a613-465b-85ad-bb79f15b1add" />
 
+Pilihan Menu 2 menunjukkan data tempat wisata yang telah tersimpan dalam program. Data dibagi menjadi dua kategori, yaitu Wisata Alam dan Wisata Buatan. Setiap kategori memiliki informasi umum seperti ID, nama, lokasi, dan harga tiket, serta informasi khusus sesuai jenis wisatanya. Pembagian data tersebut sesuai dengan studi kasus karena tempat wisata di Kalimantan Timur memiliki karakteristik yang berbeda. Wisata alam membutuhkan informasi seperti jenis alam dan tingkat kesulitan, sedangkan wisata buatan membutuhkan informasi seperti jenis wahana, jam operasional, dan batas usia.
 
 **4. Menu Update**
 
 <img width="319" height="461" alt="image" src="https://github.com/user-attachments/assets/31129812-f924-4cea-904d-2989ac17c17a" />
 
+Pilihan menu 3 menunjukkan proses pembaruan data wisata berdasarkan ID. Setelah ID ditemukan, pengguna dapat mengubah informasi umum maupun informasi khusus dari tempat wisata tersebut. Fitur update menunjukkan bahwa program tidak hanya dapat menyimpan data, tetapi juga dapat memelihara dan memperbarui informasi apabila terjadi perubahan, misalnya perubahan harga tiket atau fasilitas.
 
 **5. Menu Hapus**
 
 <img width="283" height="368" alt="image" src="https://github.com/user-attachments/assets/2c2d26fa-f96c-43fa-bb4c-79f442f2bd65" />
 
+Pilihan menu 4 menunjukkan proses penghapusan data wisata berdasarkan ID. Program mencari data berdasarkan ID yang dimasukkan, kemudian menghapus data tersebut dari ArrayList. Fitur hapus diperlukan agar data yang sudah tidak relevan dapat dikeluarkan dari sistem. Dengan demikian, data tempat wisata yang tersimpan tetap dapat dikelola sesuai kondisi yang sebenarnya.
 
 **6. Keluar Program**
 
