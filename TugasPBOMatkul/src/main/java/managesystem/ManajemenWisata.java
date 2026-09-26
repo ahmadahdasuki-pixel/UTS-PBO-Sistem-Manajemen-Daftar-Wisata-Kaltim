@@ -18,7 +18,6 @@ public class ManajemenWisata {
     private ArrayList<WisataBuatan> daftarWisataBuatan;
     private Scanner scanner;
 
-    // Constructor
     public ManajemenWisata(Scanner scanner) {
 
         this.scanner = scanner;
@@ -26,7 +25,7 @@ public class ManajemenWisata {
         daftarWisataAlam = new ArrayList<>();
         daftarWisataBuatan = new ArrayList<>();
 
-
+        // DATA DUMMY WISATA ALAM
         daftarWisataAlam.add(
             new WisataAlam(
                 1,
@@ -35,10 +34,11 @@ public class ManajemenWisata {
                 25000,
                 "Pantai",
                 "Mudah",
-                "Banana Boot"
+                "Toilet dan Gazebo"
             )
         );
 
+        // DATA DUMMY WISATA BUATAN
         daftarWisataBuatan.add(
             new WisataBuatan(
                 4,
@@ -52,10 +52,11 @@ public class ManajemenWisata {
             )
         );
 
-
     }
 
-    // Tambah Wisata
+    // =========================
+    // CREATE
+    // =========================
 
     public void tambahWisata() {
 
@@ -65,21 +66,16 @@ public class ManajemenWisata {
         int id = scanner.nextInt();
         scanner.nextLine();
 
-        // Mengecek ID pada wisata alam
+        // CONDITION + LOOPING
         for (WisataAlam wisata : daftarWisataAlam) {
-
             if (wisata.getIdWisata() == id) {
-
                 System.out.println("ID Wisata sudah digunakan!");
                 return;
             }
         }
 
-        // Mengecek ID pada wisata buatan
         for (WisataBuatan wisata : daftarWisataBuatan) {
-
             if (wisata.getIdWisata() == id) {
-
                 System.out.println("ID Wisata sudah digunakan!");
                 return;
             }
@@ -103,8 +99,7 @@ public class ManajemenWisata {
         int jenis = scanner.nextInt();
         scanner.nextLine();
 
-        // Tambah Wisata Alam
-
+        // CONDITION
         if (jenis == 1) {
 
             System.out.print("Jenis Alam          : ");
@@ -130,20 +125,16 @@ public class ManajemenWisata {
 
             System.out.println("Data wisata alam berhasil ditambahkan!");
 
-        // Tambah Wisata Buatan
-
         } else if (jenis == 2) {
 
             System.out.print("Jenis Wahana        : ");
             String jenisWahana = scanner.nextLine();
 
             System.out.print("Jam Buka (HH:mm)    : ");
-            LocalTime jamBuka =
-                    LocalTime.parse(scanner.nextLine());
+            LocalTime jamBuka = LocalTime.parse(scanner.nextLine());
 
             System.out.print("Jam Tutup (HH:mm)   : ");
-            LocalTime jamTutup =
-                    LocalTime.parse(scanner.nextLine());
+            LocalTime jamTutup = LocalTime.parse(scanner.nextLine());
 
             System.out.print("Batas Usia          : ");
             String batasUsia = scanner.nextLine();
@@ -169,12 +160,13 @@ public class ManajemenWisata {
         }
     }
 
-    // Tampilkan Daftar Wisata
+    // =========================
+    // READ
+    // =========================
 
     public void tampilkanWisata() {
 
         System.out.println("\n=== DATA TEMPAT WISATA ===");
-
 
         System.out.println("\n--- WISATA ALAM ---");
 
@@ -184,11 +176,13 @@ public class ManajemenWisata {
 
         } else {
 
+            // LOOPING
             for (WisataAlam wisata : daftarWisataAlam) {
 
                 System.out.println("----------------------------");
 
-                wisata.tampilkanWisataAlam();
+                // POLYMORPHISM
+                wisata.tampilkanDataUmum();
             }
         }
 
@@ -200,18 +194,22 @@ public class ManajemenWisata {
 
         } else {
 
+            // LOOPING
             for (WisataBuatan wisata : daftarWisataBuatan) {
 
                 System.out.println("----------------------------");
 
-                wisata.tampilkanWisataBuatan();
+                // POLYMORPHISM
+                wisata.tampilkanDataUmum();
             }
         }
 
         System.out.println("----------------------------");
     }
 
-    // Update Wisata 
+    // =========================
+    // UPDATE
+    // =========================
 
     public void updateWisata() {
 
@@ -221,29 +219,28 @@ public class ManajemenWisata {
         int id = scanner.nextInt();
         scanner.nextLine();
 
-        // UPDATE Wisata Alam
-
+        // UPDATE WISATA ALAM
         for (WisataAlam wisata : daftarWisataAlam) {
 
             if (wisata.getIdWisata() == id) {
 
-                System.out.print("Nama Wisata baru       : ");
+                System.out.print("Nama Wisata baru        : ");
                 String nama = scanner.nextLine();
 
-                System.out.print("Lokasi baru            : ");
+                System.out.print("Lokasi baru             : ");
                 String lokasi = scanner.nextLine();
 
-                System.out.print("Harga Tiket baru       : ");
+                System.out.print("Harga Tiket baru        : ");
                 int harga = scanner.nextInt();
                 scanner.nextLine();
 
-                System.out.print("Jenis Alam baru        : ");
+                System.out.print("Jenis Alam baru         : ");
                 String jenisAlam = scanner.nextLine();
 
-                System.out.print("Tingkat Kesulitan baru: ");
+                System.out.print("Tingkat Kesulitan baru : ");
                 String tingkatKesulitan = scanner.nextLine();
 
-                System.out.print("Fasilitas baru         : ");
+                System.out.print("Fasilitas baru          : ");
                 String fasilitas = scanner.nextLine();
 
                 wisata.setNamaWisata(nama);
@@ -259,8 +256,7 @@ public class ManajemenWisata {
             }
         }
 
-        // UPDATE Wisata Buatan
-
+        // UPDATE WISATA BUATAN
         for (WisataBuatan wisata : daftarWisataBuatan) {
 
             if (wisata.getIdWisata() == id) {
@@ -303,10 +299,14 @@ public class ManajemenWisata {
             }
         }
 
-        System.out.println("Data wisata dengan ID tersebut tidak ditemukan.");
+        System.out.println(
+            "Data wisata dengan ID tersebut tidak ditemukan."
+        );
     }
 
-    // Hapus Wisata
+    // =========================
+    // DELETE
+    // =========================
 
     public void hapusWisata() {
 
@@ -316,22 +316,20 @@ public class ManajemenWisata {
         int id = scanner.nextInt();
         scanner.nextLine();
 
-        // Hapus Wisata Alam
-
+        // LOOPING
         for (int i = 0; i < daftarWisataAlam.size(); i++) {
 
             if (daftarWisataAlam.get(i).getIdWisata() == id) {
 
                 daftarWisataAlam.remove(i);
 
-                System.out.println("Data wisata berhasil dihapus!");
+                System.out.println(
+                    "Data wisata berhasil dihapus!"
+                );
 
                 return;
             }
         }
-
-        // HAPUS Wisata Buatan
-        
 
         for (int i = 0; i < daftarWisataBuatan.size(); i++) {
 
@@ -339,12 +337,16 @@ public class ManajemenWisata {
 
                 daftarWisataBuatan.remove(i);
 
-                System.out.println("Data wisata berhasil dihapus!");
+                System.out.println(
+                    "Data wisata berhasil dihapus!"
+                );
 
                 return;
             }
         }
 
-        System.out.println("Data wisata dengan ID tersebut tidak ditemukan.");
+        System.out.println(
+            "Data wisata dengan ID tersebut tidak ditemukan."
+        );
     }
 }

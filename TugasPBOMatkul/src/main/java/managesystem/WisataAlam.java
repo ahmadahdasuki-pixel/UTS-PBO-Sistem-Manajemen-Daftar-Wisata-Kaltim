@@ -65,17 +65,12 @@ public class WisataAlam extends TempatWisata {
     }
 
     // Menampilkan data
-
-    public void tampilkanWisataAlam() {
-
-        tampilkanDataUmum();
-
+    @Override
+    public void tampilkanDataUmum() {
+        super.tampilkanDataUmum();
         System.out.println("Jenis Alam        : " + jenisAlam);
         System.out.println("Tingkat Kesulitan : " + tingkatKesulitan);
         System.out.println("Fasilitas         : " + fasilitasAlam);
     }
 
-    void tampilkanDataAlam() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
 }

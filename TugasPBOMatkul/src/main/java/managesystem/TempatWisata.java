@@ -63,7 +63,6 @@ public class TempatWisata {
     // Menampilkan data umum
 
     public void tampilkanDataUmum() {
-
         System.out.println("ID Wisata   : " + idWisata);
         System.out.println("Nama Wisata : " + namaWisata);
         System.out.println("Lokasi      : " + lokasi);

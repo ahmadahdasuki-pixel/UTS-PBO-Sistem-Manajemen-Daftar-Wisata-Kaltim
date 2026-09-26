@@ -78,17 +78,12 @@ public class WisataBuatan extends TempatWisata {
     }
 
     // Menampilkan data
-
-    public void tampilkanWisataBuatan() {
-
-        tampilkanDataUmum();
-
+    @Override
+    public void tampilkanDataUmum() {
+        super.tampilkanDataUmum();
         System.out.println("Jenis Wahana     : " + jenisWahana);
         System.out.println("Jam Operasional  : " + jamBuka + " - " + jamTutup);
         System.out.println("Batas Usia       : " + batasUsia);
     }
 
-    void tampilkanDataBuatan() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
 }
